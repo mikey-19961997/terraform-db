@@ -8,7 +8,7 @@ resource "aws_security_group" "mysg" {
     from_port        = 3306
     to_port          = 3306
     protocol         = "tcp"
-    cidr_blocks      = [var.vpc_details.cidr_block]
+    cidr_blocks      = ["0.0.0.0/0"]
   }
 
   egress {
