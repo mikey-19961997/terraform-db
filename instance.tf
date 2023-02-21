@@ -10,6 +10,10 @@ resource "aws_instance" "web" {
   tags = {
     Name = "mikey-instance"
   }
+}
+
+resource "null_resource" "prac" {
+  triggers = var.trigger_num
 
   provisioner "remote-exec" {
 
@@ -28,5 +32,4 @@ resource "aws_instance" "web" {
   }
 
   depends_on = [ aws_instance.web ]
-
 }
