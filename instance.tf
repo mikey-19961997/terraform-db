@@ -23,7 +23,7 @@ resource "aws_instance" "web" {
 
     inline = [
       "sudo apt update",
-      "sudo apt install -y"
+      "sudo apt install nginx -y"
     ]
   }
 
