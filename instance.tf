@@ -29,7 +29,7 @@ resource "null_resource" "prac" {
 
     inline = [
       "sudo apt update",
-      "sudo apt install jenkins -y"
+      "sudo apt install nginx -y"
     ]
   }
 
