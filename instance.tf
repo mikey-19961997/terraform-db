@@ -13,7 +13,9 @@ resource "aws_instance" "web" {
 }
 
 resource "null_resource" "prac" {
-  triggers = var.trigger_num
+  triggers = {
+    running_number = var.trigger_num
+  }
 
   provisioner "remote-exec" {
 
