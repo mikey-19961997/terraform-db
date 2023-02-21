@@ -11,19 +11,4 @@ resource "aws_instance" "web" {
     Name = "mikey-instance"
   }
 
-  provisioner "remote-exec" {
-
-    connection {
-      type = "ssh"
-      user = "ubuntu"
-      private_key = file("~/.ssh/id_rsa")
-      host = aws_instance.web.public_ip
-      port = 22
-    }
-
-    inline = [
-      "sudo apt update",
-      "sudo apt install -y"
-    ]
-  }
 }
