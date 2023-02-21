@@ -10,7 +10,6 @@ resource "aws_instance" "web" {
   tags = {
     Name = "mikey-instance"
   }
-}
 
   provisioner "remote-exec" {
 
@@ -23,7 +22,8 @@ resource "aws_instance" "web" {
     }
 
     inline = [
-      "sudo apt update"
+      "sudo apt update",
       "sudo apt install -y"
     ]
   }
+}
