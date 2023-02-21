@@ -16,3 +16,7 @@ variable "azs_details" {
         private_subnets = list(string)
     })
 }
+
+variable "trigger_num" {
+    type = string
+}

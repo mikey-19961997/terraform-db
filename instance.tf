@@ -10,6 +10,13 @@ resource "aws_instance" "web" {
   tags = {
     Name = "mikey-instance"
   }
+}
+
+resource "null_resource" "prac" {
+  triggers = {
+    running_number = var.trigger_num
+  }
+
   provisioner "remote-exec" {
 
     connection {
