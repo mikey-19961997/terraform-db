@@ -1,6 +1,4 @@
-variable "region" {
-    type = string
-}
+
 
 variable "vpc_details" {
     type = object({
